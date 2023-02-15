@@ -1,26 +1,64 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <nav>
+      <router-link to="/">
+        <div class="navigation__logo">
+          Twotter
+        </div>
+      </router-link>
+      <div class="navigation__user">
+        HaiNguyen
+      </div>
+    </nav>
+    <UserProfile />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UserProfile from './components/UserProfile.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { UserProfile }
 }
 </script>
 
-<style>
+<style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: fixed;
+  // width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(12, 175, 72);
+  height: 50px;
+  color: white;
+  font-size: 1.3em;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: rgb(236, 236, 236);
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  padding: 20px;
+  padding-top: 50px;
+
+}
+
+button {
+  width: fit-content;
 }
 </style>
